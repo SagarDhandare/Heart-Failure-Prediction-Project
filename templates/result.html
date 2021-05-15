@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h1><i class="fa fa-heartbeat fa-2x" aria-hidden="true"></i>Heart Failure Prediction<i class="fa fa-heartbeat fa-2x" aria-hidden="true"></i></h1>
+
+        <br><br><br>
+            <h2>{{ prediction_text }}<h2>
+
+
+            <div class='footer'>
+                <div class="contact">
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <p style="font-size:18px;" class='footer-description'>Made with ❤ by Sagar Dhandare.</p>
+                    <a target="_blank" href="https://github.com/SagarDhandare"><i class="fa fa-github fa-x" aria-hidden="true"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/sagar-dhandare-a401271a3/"><i class="fa fa-linkedin fa-x" aria-hidden="true"></i></a>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+    <style>
+        body {
+            background-color: #dfe5a7;
+            text-align: center;
+            padding: 0px;
+        }
+
+    </style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</body>
+
+</html>

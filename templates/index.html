@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h1><i class="fa fa-heartbeat fa-2x" aria-hidden="true"></i>Heart Failure Prediction<i class="fa fa-heartbeat fa-2x" aria-hidden="true"></i></h1>
+
+            <h3>Age</h3>
+            <input id="first" name="age" type="number ">
+            <h3>Anaemia (Yes=1 / No=0)</h3><br><input id="second" name="anaemia" required="required">
+            <h3>Creatinine Phosphokinase</h3><input id="third" name="creatinine_phosphokinase" required="required">
+            <h3>Diabetes (Yes=1 / No=0)</h3><br><input id="fourth" name="diabetes" required="required">
+            <h3>Ejection Fraction</h3><br><input id="fifth" name="ejection_fraction" required="required">
+            <h3>High Blood Pressure (Yes=1 / No=0)</h3><br><input id="sixth" name="high_blood_pressure" required="required">
+            <h3>Platelets</h3><br><input id="seventh" name="platelets" required="required">
+            <h3>Serum Creatinine</h3><br><input id="eighth" name="serum_creatinine" required="required">
+            <h3>Serum Sodium</h3><br><input id="ninth" name="serum_sodium" required="required">
+            <h3>Sex (Male=0 / Female=1)</h3><br><input id="tenth" name="sex" required="required">
+            <h3>Smoking (Yes=1 / No=0)</h3><br><input id="eleventh" name="smoking" required="required">
+
+            <br><br><button id="sub" type="submit ">Predict</button>
+            <br>
+
+
+
+            <div class='footer'>
+                <div class="contact">
+                    <p class='footer-description'>Made with ❤ by Sagar Dhandare.</p>
+                    <a target="_blank" href="https://github.com/SagarDhandare"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/sagar-dhandare-a401271a3/"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                </div>
+
+            </div>
+
+        </form>
+
+        <br><br><br><h2>{{ prediction_text }}<h2>
+
+
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: #dfe5a7;
+            text-align: center;
+            padding: 0px;
+        }
+
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+
+        #fuel:hover {
+            background-color: coral;
+        }
+
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #research:hover {
+            background-color: coral;
+        }
+
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #resea:hover {
+            background-color: coral;
+        }
+
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #sub:hover {
+            background-color: coral;
+        }
+
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fifth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #sixth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #seventh {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #eighth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #ninth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #tenth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #eleventh {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</body>
+
+</html>
