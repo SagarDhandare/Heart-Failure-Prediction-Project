@@ -1,5 +1,5 @@
 # Heart-Failure-Prediction-Project
-
+<img src="https://bjcardio.co.uk/wp-content/uploads/2020/05/ADVERT-BLOCK-Heart-Failure.jpg">
 
 • This repository consists of files required to deploy a Machine Learning Web App created with Flask on Heroku platform.
 
