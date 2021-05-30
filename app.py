@@ -33,9 +33,9 @@ def predict():
 
 
         if prediction == 1:
-            return render_template('result.html', prediction_text='Sorry you are chances of HEART FAILURE is HIGH')
+            return render_template('result.html', prediction_text='Your chances of getting heart failure is high, we kindly request you to take good care of your health')
         else:
-            return render_template('result.html', prediction_text='Dont Worry... Stay Home Stay Safe')
+            return render_template('result.html', prediction_text='You are robust, nothing to worry')
 
     else:
         return render_template('result.html')
