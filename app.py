@@ -28,7 +28,7 @@ def predict():
 
         
         
-        prediction = model.predict(stdscale.transform([[age, anaemia, creatinine_phosphokinase, diabetes, ejection_fraction, high_blood_pressure, platelets, serum_creatinine, serum_sodium, sex, smoking]])[0]
+        prediction = model.predict(stdscale.fit_transform([[age, anaemia, creatinine_phosphokinase, diabetes, ejection_fraction, high_blood_pressure, platelets, serum_creatinine, serum_sodium, sex, smoking]])[0]
         
 
         if prediction == 1:
