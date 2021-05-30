@@ -25,12 +25,13 @@ def predict():
         serum_sodium = int(request.form['serum_sodium'])
         sex = int(request.form['sex'])
         smoking = int(request.form['smoking'])
+        
+        lst1 = [[age, anaemia, creatinine_phosphokinase, diabetes, ejection_fraction, high_blood_pressure, platelets, serum_creatinine, serum_sodium, sex, smoking]]
+        lst2 = stdscale.fit_transform(lst1)
+        prediction = model.predict(lst2)
+        prediction = int(prediction)
 
         
-        
-        prediction = model.predict(stdscale.fit_transform([[age, anaemia, creatinine_phosphokinase, diabetes, ejection_fraction, high_blood_pressure, platelets, serum_creatinine, serum_sodium, sex, smoking]])[0]
-        
-
         if prediction == 1:
             return render_template('result.html', prediction_text='Your chances of getting heart failure is high, we kindly request you to take good care of your health')
         else:
