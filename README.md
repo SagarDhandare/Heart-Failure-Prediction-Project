@@ -10,4 +10,4 @@ https://heart-failure.herokuapp.com/
 • Please do ⭐ the repository, if it helped you in anyway.
 
 
-![](https://SagarDhandare-github.azurewebsites.net/api/VisitorHit?user=SagarDhandare&repo=github-visitors-badge&countColorcountColor&countColor=%237B1E7A)
+
